@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\teste;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/contact', function () {
@@ -17,9 +16,7 @@ Route::get('/createEvent', function () {
 });
 
 Route::get('/products', function ($id = null) {
-
     $busca = request('search');
-
     return view('products', [ 'busca' => $busca]);
 });
 
@@ -32,3 +29,4 @@ Route::get('/event', [EventController::class, 'index']);
 
 // Nova rota POST
 Route::post('/event/store', [EventController::class, 'store']);
+>>>>>>> 34ab4f5 (flash message)

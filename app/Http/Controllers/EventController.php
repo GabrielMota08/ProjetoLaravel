@@ -19,14 +19,15 @@ class EventController extends Controller
     }
 
     public function store(Request $request) {
-        // Apenas para testar o POST e a manipulação de dados
-        $nome = $request->input('nome');
-        $idade = $request->input('idade');
+        $event = new Event;
 
-        return response()->json([
-            'message' => 'Dados recebidos com sucesso',
-            'nome' => $nome,
-            'idade' => $idade
-        ]);
+        $event->title = $request->title;
+        $event->city = $request->city;
+        $event->private = $request->private;
+        $event->description = $request->description;
+
+        $event->save();
+
+        return redirect('/')->with('msg', "Evento criado com sucesso!");
     }
 }
