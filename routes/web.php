@@ -29,4 +29,3 @@ Route::get('/event', [EventController::class, 'index']);
 
 // Nova rota POST
 Route::post('/event/store', [EventController::class, 'store']);
->>>>>>> 34ab4f5 (flash message)
