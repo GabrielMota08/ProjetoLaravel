@@ -25,7 +25,9 @@ Route::get('/products_teste/{id?}', function ($id = null) {
 });
 
 // Rota GET existente
-Route::get('/event', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
+
+Route::get('/events/{id}', [EventController::class, 'show']);
 
 // Nova rota POST
 Route::post('/event/store', [EventController::class, 'store']);

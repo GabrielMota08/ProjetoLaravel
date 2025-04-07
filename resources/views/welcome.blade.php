@@ -4,10 +4,10 @@
 
 @section('content')
 
-@foreach($events as $event)
-    <p>{{$events -> title}}</p>
-    <p>{{$events -> description}}</p>
-    <p>{{$events -> city}}</p>
+@foreach($event as $event)
+    <p>{{$event -> title}}</p>
+    <p>{{$event -> description}}</p>
+    <p>{{$event -> city}}</p>
     @if($event->private)
         <p>Evento privado</p>
     @else
