@@ -11,17 +11,9 @@ Route::get('/info', function () {
     return view('info');
 });
 
-Route::get('/createEvent', function () {
-    return view('create');
-});
-
 Route::get('/products', function ($id = null) {
     $busca = request('search');
     return view('products', [ 'busca' => $busca]);
-});
-
-Route::get('/products_teste/{id?}', function ($id = null) {
-    return view('products_teste', [ 'id' => $id]);
 });
 
 // Rota GET existente

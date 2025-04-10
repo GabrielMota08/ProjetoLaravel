@@ -14,5 +14,8 @@
         <p>Evento aberto</p>
     @endif
 @endforeach
+@if(count($event) === 0)
+    <p>Não há eventos disponíveis</p>
+@endif
 
 @endsection
