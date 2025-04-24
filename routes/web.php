@@ -13,8 +13,10 @@ Route::get('/info', function () {
 
 Route::get('/products', function ($id = null) {
     $busca = request('search');
-    return view('products', [ 'busca' => $busca]);
+    return view('products', [ 'busca' => $busca ]);
 });
+
+Route::get('/', [EventController::class, 'index']);
 
 // Rota GET existente
 Route::get('/events/create', [EventController::class, 'create']);
